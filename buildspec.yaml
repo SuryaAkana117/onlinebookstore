@@ -8,7 +8,7 @@ phases:
         - yum update -y
   build:
     commands:
-        - mvn package
+        - mvn test
         - mkdir output
         - cp target/*.war output/books.war
 artifacts:
