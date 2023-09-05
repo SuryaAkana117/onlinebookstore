@@ -9,8 +9,10 @@ phases:
   build:
     commands:
         - mvn clean package
+        - mkdir output
+        - cp target/*.war output/books.war
 artifacts:
   files:
-        - target/*.war
+        - 'output/*.war'
         - appspec.yaml
         - scripts/*
